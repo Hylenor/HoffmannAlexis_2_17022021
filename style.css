@@ -1,0 +1,59 @@
+/* Aller on y va !
+*/
+
+body {
+  font-family: Raleway;
+}
+
+header {
+  background-color: darkblue;
+}
+
+.ancres { 
+  display: flex; 
+  justify-content: flex-end;
+  align-items:flex-start
+
+  
+}
+.logo {
+  max-width: 100%;
+  width: 100px;
+}
+
+
+
+.populaire {
+  background-color:darkred;
+}
+
+.hebergements {
+  background-color:gold;
+}
+
+.activites {
+  background-color: green;
+}
+
+footer {
+  background-color: grey;
+}
+
+.header_img {
+  grid-area: logo;
+}
+
+#afficherplus:checked ~ .plusdaffichage {
+  display: block;
+}
+
+.plusdaffichage {
+  display: none;
+}
+
+#afficherplus {
+  display: none;
+}
+.afficheplus {
+  cursor: pointer;
+}
