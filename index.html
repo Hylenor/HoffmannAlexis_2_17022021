@@ -46,25 +46,24 @@
           <p>En plein centre ville ou en pleine nature</p>
         </div>
         <div class="input_search">
+          <span class="iconsearch"><i class="fas fa-map-marker-alt"></i></span>
           <input
             type="search"
             id="site-search"
             name="q"
             aria-label="Cherchez votre ville de vacances"
             placeholder="Marseille, France"
-          /><button>Rechercher</button>
+          /><button class="boutonrecherche">Rechercher</button>
         </div>
         <div class="filtres">
-          <h3>Filtres</h3>
-          <div class="boutonsfiltres">
-            <i class="fas fa-money-bill-wave"></i><p>Économique</p>
-            <i class="fas fa-child"></i><p>Familial</p>
-            <i class="fas fa-heart"></i><p>Romantique</p>
-            <i class="fas fa-dog"></i><p>Animaux autorisés</p>
-          </div>
+          <h2>Filtres</h2>
+          <span class="boutonfiltre"><span class="iconebouton"><i class="fas fa-money-bill-wave"></i></span><p>Économique</p></span>
+          <span class="boutonfiltre"><span class="iconebouton"><i class="fas fa-child"></i></span><p>Familial</p></span>
+          <span class="boutonfiltre"><span class="iconebouton"><i class="fas fa-heart"></i></span><p>Romantique</p></span>
+          <span class="boutonfiltre"><span class="iconebouton"><i class="fas fa-dog"></i></span><p>Animaux autorisés</p></span>
         </div>
         <div class="filtrep">
-          <p>Plus de 500 logements sont disponibles dans cette ville</p>
+          <span class="iconeinfo"><i class="fas fa-info"></i></span><p>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
       </div>
 
@@ -73,8 +72,9 @@
 
         <!--Partie "Hebergements"-->
         <div class="hebergements" id="hébergements">
-          <h2>Hébergements</h2>
-          <div class="boxcannebiere">
+          <h2>Hébergements à Marseille</h2>
+          <div class="hebergementsboites">
+          <div class="hebergementcarte">
             <img
               src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
               alt="Auberge la Cannebière"
@@ -88,7 +88,7 @@
             <i class="fas fa-star star-grey"></i>
           </div>
 
-          <div class="boxduport">
+          <div class="hebergementcarte">
             <img
               src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
               alt="Hôtel du port"
@@ -102,7 +102,7 @@
            <i class="fas fa-star"></i>
           </div>
 
-          <div class="boxlesmouettes">
+          <div class="hebergementcarte">
             <img
               src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
               alt="Hôtel Les mouettes"
@@ -116,7 +116,7 @@
             <i class="fas fa-star star-grey"></i>
           </div>
 
-          <div class="boxdelamer">
+          <div class="hebergementcarte">
             <img
               src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
               alt="Hôtel de le mer"
@@ -130,7 +130,7 @@
             <i class="fas fa-star star-grey"></i>
           </div>
 
-          <div class="boxpanier">
+          <div class="hebergementcarte">
             <img
               src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
               alt="Auberge Le Panier"
@@ -144,7 +144,7 @@
             <i class="fas fa-star star-grey"></i>
           </div>
 
-          <div class="boxamina">
+          <div class="hebergementcarte">
             <img
               src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
               alt="Hôtel chez Amina"
@@ -172,7 +172,8 @@
              <i class="fas fa-star"></i>
             </div>
           </div> -->
-          <span class="Afficher_plus"><p>Afficher plus</p></span>
+        </div>
+          <span class="afficherplus"><p>Afficher plus</p></span>
         </div>
 
         <!--Partie "Les plus Populaires"-->

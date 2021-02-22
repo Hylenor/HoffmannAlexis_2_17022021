@@ -1,6 +1,5 @@
 /*===============GLOBAL===============*/
 body {
-  line-height: 1.15;
   font-family: Raleway, sans-serif;
 }
 /* ToDo : joindre body et main une fois que je saurais
@@ -66,7 +65,7 @@ nav{
 h1{
   font-size: 2em;
   font-weight: 700;
-  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .titre > p {
@@ -76,8 +75,103 @@ h1{
  p {
   display: inline-flex;
 }
+/*===============RECHERCHE===============*/
 
-/*===============BOX===============*/
+.input_search {
+  display:inline-flex; /*  <== Solution à une galère de plus d'une heure !*/
+}
+
+/*====icone====*/
+.iconsearch {
+  background-color: #F2F2F2;
+  padding: 1rem 1.25rem;
+  text-align:center;
+  border-radius: 1rem 0 0 1rem;
+}
+/*====input====*/
+input[type=search] {
+  border-top: #F2F2F2 1px solid;
+  border-bottom : #F2F2F2 1px solid;
+  border-right : none;
+  border-left : none;
+  width: 14rem;
+  font-family: Raleway;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0 1.5rem;
+}
+/*====bouton====*/
+.boutonrecherche {
+  background-color: #0065FC;
+  border-radius:0 1rem 1rem 0;
+  border:none;
+  padding:0 1.5rem;
+  font-weight:bold;
+  color: white;
+  font-size: 1rem;
+}
+/*===============FILTRES===============*/
+.filtres {
+  display: flex;
+  margin-top: 2rem;
+}
+/*====titre====*/
+.filtres h2 {
+  display:flex;
+  margin-right:2rem;
+  margin-top: 0.5em;
+}
+
+/*======Boutons======*/
+.boutonfiltre {
+  display: inline-flex;
+  border: 2px solid #f2f2f2;
+  border-radius: 3rem;
+  font-weight: bold;
+  align-items:center;
+  margin-right: 2rem;
+  height:max-content;
+  cursor: pointer;
+}
+
+/*===icone bouton====*/
+
+.iconebouton {
+  display: inline-flex;
+  background-color:#deecff;
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconebouton .fas {
+  color:#0065FC;
+}
+
+/*======paragraphe======*/
+.filtrep {
+  margin-bottom: 1.5rem;
+}
+.filtres p {
+  margin:0 1rem;
+}
+/*====iconeparagraphe====*/
+.iconeinfo .fas {
+  color:#0065FC;
+  border: 1px solid #e2e2e2;
+  border-radius:100%;
+  height: 2rem;
+  width: 2rem;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/*===============BOITES===============*/
 
 .boites {
   grid-template-columns: 6fr 3fr;
@@ -106,7 +200,33 @@ h1{
   background-color: #f2f2f2;
   padding: 2rem;
   border-radius: 1.5rem;
+  margin-left: 2rem;
+}
 
+.hebergementsboites {
+  grid-template-columns: 1fr 1fr 1fr;
+  display:grid;
+  column-gap: 2rem;
+  row-gap:2rem;
+}
+
+.hebergementcarte {
+  border-radius: 1rem;
+  background-color: white;
+  cursor: pointer;
+  flex-direction: column;
+
+}
+.hebergementcarte img {
+  height:7rem;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+
+.afficherplus {
+  font-weight: bold;
+  cursor: pointer;
 }
 /*===============ACTIVITES===============*/
 .activites {
