@@ -6,45 +6,77 @@ main {
   margin: auto;
   max-width: 1440px;
 }
-
+body {
+  margin: 0;
+}
 
 /*===============HAUT DE PAGE===============*/
 
 
 header {
-  grid-template-columns: auto 1fr auto auto;
-  grid-template-areas: "logo . ancres inscription";
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "logo fill ancres";
   display: grid;
   align-items: center;
+  margin-top: 0;
 }
 
 .header_img {
   grid-area: logo;
 }
 
-nav{
-  display: flex;
-  grid-area: ancres;
-  text-align: center;
-  border-top: 3px solid #0065FC;
-  border-top: 3px transparent solid;
-  color: inherit;
-  text-decoration: none;
-}
-
-.ancres{
-  padding: 2em;
-}
-
-.inscription {
-  display: grid;
-  grid-area: inscription;
-}
 .logo {
   max-width: 100%;
   width: 100px;
   padding: 0 2rem;
 }
+
+/* Pas propre mais ça fait ce qu'il faut. A modifier plus tard */
+.colonnefill {
+  grid-area: fill;
+}/* Pas propre mais ça fait ce qu'il faut. A modifier plus tard */
+
+.ancres {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: "ancreH ancreA ancreI";
+  grid-area: ancres;
+}
+
+/* Pour la mise en forme têtue des links */
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}/* Pour la mise en forme têtue des links */
+
+.ancreH a {
+  color:#0065FC;
+}
+
+.ancreH {
+  grid-area: ancreH;
+  padding:2rem;
+  border-top: 3px solid #0065FC;
+}
+
+.ancreA a {
+  color:black;
+}
+
+.ancreA {
+  grid-area: ancreA;
+  padding:2rem;
+}
+
+.ancreI a {
+  color:#0065FC;
+  font-weight: bold;
+}
+
+.ancreI {
+  grid-area: ancreI;
+  padding:2rem;
+}
+
 
 
 /*==============================MAIN==============================*/
