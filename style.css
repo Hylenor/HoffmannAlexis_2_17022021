@@ -369,12 +369,13 @@ input[type="search"] {
 }
 
 .activitescartes {
+  position: relative;
   border-radius: 1rem;
   flex-direction: column;
   overflow: hidden;
   display: flex;
   box-shadow: 0 0 15px lightgrey;
-}
+  }
 
 /*======Emplacements cartes======*/
 .activitescarteA {
@@ -408,8 +409,14 @@ input[type="search"] {
 }
 
 .activitescartes h3 {
-  margin: 1.2rem 1.5rem;
-}
+  padding: 1.2rem 1.5rem;
+  position: absolute;
+  bottom: 0;
+  background: white;
+  padding: -5px;
+  width: 100%;
+  margin-bottom: 0;
+  } 
 /*==============================FOOTER==============================*/
 
 footer {
