@@ -2,6 +2,8 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <!--Viewport is used for resposnive design  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservia, trouvez votre hébergement pour des vacances de rêve</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -25,25 +27,37 @@
     <main>
       <!--Logo & Navigation-->
       <header>
-        <img
-          class="logo"
-          src="images/logo/Reservia@3x.png"
-          alt="Logo Reservia"
-        />
+        <img class="logo logo-desktop" src="images/logo/Reservia@3x.png" alt="Logo Reservia" />
         <div class="colonnefill"> <!--Je n'ai pas trouvé d'alternative pour le moment.--></div>
-        <div class="Ancres"><nav class="ancres">
-            <div class="ancreH"><a href="#hébergements">Hébergements</a></div>
-            <div class="ancreA"><a href="#activités">Activités</a></div>
-            <div class="ancreI"><a href="Inscription.html">S'inscrire</a></div>
-          </nav>
+        <div class="Ancres">
+        	<nav class="ancres">
+
+        		<div class="ancreH ancre-desktop"><a href="#hébergements">Hébergements</a></div>
+	            <div class="ancreA ancre-desktop"><a href="#activités">Activités</a></div> 
+	            <div class="ancreI ancre-desktop"><a href="Inscription.html">S'inscrire</a></div> 
+        		<!-- For mobile view -->
+        		<div class="row">
+        			<div class="ancreI">
+        				<img class="logo" src="images/logo/Reservia@3x.png" alt="Logo Reservia" />
+        			</div>
+        			<div class="ancreI">
+        				<a href="Inscription.html">S'inscrire</a>
+        			</div>
+        		</div>
+        		<div class="row-center">
+        			<div class="ancreH"><a href="#hébergements">Hébergements</a></div>
+        			<div class="ancreA"><a href="#activités">Activités</a></div>
+        		</div>
+	            <!-- For mobile view end -->
+          	</nav>
         </div>
       </header>
 
       <!--Partie en-tête-->
       <div class="entete">
         <div class="titre">
-          <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-          <p>En plein centre ville ou en pleine nature</p>
+          <h1 class="heading">Trouvez votre hébergement pour des vacances de rêve</h1>
+          <p class="paragraph">En plein centre ville ou en pleine nature</p>
         </div>
         <div class="input_search">
           <div class="iconsearch"><i class="fas fa-map-marker-alt"></i></div>
@@ -53,10 +67,10 @@
             name="q"
             aria-label="Cherchez votre ville de vacances"
             placeholder="Marseille, France"
-          /><button class="boutonrecherche">Rechercher</button>
+          /><button class="boutonrecherche"><i class="fas fa-search"></i><span class="reacher_btn">Rechercher</span></button>
         </div>
         <div class="filtres">
-          <h2>Filtres</h2>
+        		 <h2>Filtres</h2>
           <div class="boutonfiltre"><div class="iconebouton"><i class="fas fa-money-bill-wave"></i></div><p>Économique</p></div>
           <div class="boutonfiltre"><div class="iconebouton"><i class="fas fa-child"></i></div><p>Familial</p></div>
           <div class="boutonfiltre"><div class="iconebouton"><i class="fas fa-heart"></i></div><p>Romantique</p></div>
@@ -66,7 +80,7 @@
           <div class="iconeinfo"><i class="fas fa-info"></i></div><p>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
       </div>
-
+      <div>
       <div class="boites">
         <!--"Partie centrale -->
 
@@ -209,7 +223,7 @@
         </div>
       </div>
     </div>
-
+     </div>
       <!--Partie "Activités"-->
       <div class="activites" id="activités">
         <h2>Activités à Marseille</h2>

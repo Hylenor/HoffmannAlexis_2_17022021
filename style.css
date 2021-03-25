@@ -30,14 +30,9 @@ header {
   padding: 0 2rem;
 }
 
-/* Pas propre mais ça fait ce qu'il faut. A modifier plus tard */
-.colonnefill {
-  grid-area: fill;
-} /* Pas propre mais ça fait ce qu'il faut. A modifier plus tard */
 
 .ancres {
   display: grid;
-  grid-template-columns: auto auto auto;
   grid-template-areas: "ancreH ancreA ancreI";
   grid-area: ancres;
 }
@@ -55,7 +50,6 @@ a:active {
 }
 
 .ancreH {
-  grid-area: ancreH;
   padding: 2rem;
   border-top: 3px solid #0065fc;
 }
@@ -65,7 +59,6 @@ a:active {
 }
 
 .ancreA {
-  grid-area: ancreA;
   padding: 2rem;
 }
 
@@ -75,7 +68,6 @@ a:active {
 }
 
 .ancreI {
-  grid-area: ancreI;
   padding: 2rem;
 }
 
@@ -107,7 +99,7 @@ p {
 /*===============RECHERCHE===============*/
 
 .input_search {
-  display: inline-flex; /*  <== Solution à une galère de plus d'une heure !*/
+  display: inline-flex;
 }
 
 /*====icone====*/
@@ -127,7 +119,6 @@ input[type="search"] {
   font-family: Raleway;
   font-size: 1rem;
   font-weight: bold;
-  padding: 0 1.5rem;
 }
 /*====bouton====*/
 .boutonrecherche {
@@ -208,6 +199,7 @@ input[type="search"] {
   grid-template-columns: 6fr 3fr;
   display: grid;
   column-gap: 2rem;
+
 }
 
 .fa-star {
@@ -240,7 +232,6 @@ input[type="search"] {
 
 .populaireboite {
   display: grid;
-  align-items: start;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 2rem;
 }
@@ -254,16 +245,10 @@ input[type="search"] {
   box-sizing: border-box;
   box-shadow: 0 0 15px lightgrey;
   display: flex;
-  align-items: stretch;
   height: 100%;
 }
 
 /*======Contenu carte======*/
-
-.populairecartecontenu {
-  display: flex;
-  flex-direction: column;
-}
 
 .populairecartecontenu h3 {
   margin: 0.25rem 0.75rem 0.25rem 0.75rem;
@@ -282,7 +267,6 @@ input[type="search"] {
   margin-left: 0.75rem;
 }
 .populairecarte img {
-  width: 33%;
   min-width: 33%;
   max-width: 33%;
   min-height: 100%;
@@ -359,7 +343,7 @@ input[type="search"] {
 
 .activitesbox {
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+ grid-template-rows: 1fr 1fr;
   display: grid;
   column-gap: 2rem;
   row-gap: 2rem;
@@ -380,28 +364,14 @@ input[type="search"] {
 /*======Emplacements cartes======*/
 .activitescarteA {
   grid-row: 1 / span 2;
-  grid-column: 1/1;
 }
 .activitescarteB {
   grid-row: 1/1;
-  grid-column: 2/2;
 }
 .activitescarteC {
   grid-row: 1 / span 2;
-  grid-column: 3/3;
 }
-.activitescarteD {
-  grid-row: 1/1;
-  grid-column: 4/4;
-}
-.activitescarteE {
-  grid-row: 2/2;
-  grid-column: 2/2;
-}
-.activitescarteF {
-  grid-row: 2/2;
-  grid-column: 4/4;
-}
+
 
 .activitesbox img {
   height: 100%;
@@ -417,6 +387,23 @@ input[type="search"] {
   width: 100%;
   margin-bottom: 0;
   } 
+
+  .row{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .row-center{
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  i.fas.fa-search {
+    display: none;
+  }
+  
 /*==============================FOOTER==============================*/
 
 footer {
@@ -438,4 +425,353 @@ footer {
 }
 footer p {
   margin: 0.75rem 0;
+}
+
+/*==============================RESPONSIVE==============================*/
+
+/*==============================Tablette==============================*/
+/*==============================Tablette==============================*/
+
+ @media screen and (max-width: 992px){      
+   .logo-desktop,.ancre-desktop{
+    display: none;
+   }
+  /*===========Header==============*/
+   .row,.row-center{
+    display: flex;
+   }
+    .ancres {
+      display: block;
+      
+    }
+    .ancreA{
+          padding: 2rem;
+          border-bottom: 3px solid #F2F2F2;
+          padding-left: 113px;
+      }
+   .ancreI {
+    padding: 5px 29px 0 0;
+    }
+    .ancreH{
+     border:0px;
+     border-bottom: 3px solid #0065fc;
+    }
+    
+     
+  
+ /*===========En-tête==============*/
+    .heading{
+     text-align:center;
+      margin-top: 23px;
+      margin-bottom:20px;
+    }
+
+    i.fas.fa-search {
+    display: block;
+  }
+  .reacher_btn{
+   display:none; 
+  }
+    .paragraph{
+     margin-top:10px;
+     margin-left:43px;
+     margin-bottom:30px;
+    }
+/*===========Hébergements==============*/
+    .hebergements{
+      background-color:#ffff;
+    }
+
+    .hebergementsboites {
+      grid-template-columns: 1fr;
+      display: grid;
+      width:96%;
+    }
+    .boites {
+      grid-template-columns: 1fr ;
+      display: grid;
+      column-gap: 2rem;
+    }
+  /*===========Populaire==============*/
+    .populaireboite{
+      display: grid;
+      grid-template-rows: 1fr;
+    }
+    .populairecarte{
+     height:200px;
+
+    }
+/*===========Activités==============*/
+    .activitesbox{
+    display:contents;
+    }
+    .activitescartes{
+    margin-top:20px;
+    margin-bottom:47px;
+    width:94%;
+    }
+    .activitescarteB{
+    height: 350px;
+    }
+ /*===========Filtres==============*/
+    .filtres{
+      display:flex;
+      display: flow-root;
+    }
+    .boutonfiltre{
+    margin-top:20px;
+    }
+
+     .filtrep {
+        display: flex;
+        justify-content: space-around;
+    }
+    .iconeinfo{
+     margin-top:20px;
+    }
+/*===========Footer==============*/
+    .footerboite {
+      grid-template-columns: 1fr;
+      display: grid;
+    }
+}
+
+/*==============================MOBILE paysage==============================*/
+/*==============================MOBILE paysage==============================*/
+
+  @media screen and (max-width: 786px){     
+
+     /*===========Header==============*/
+   .logo-desktop,.ancre-desktop{
+    display: none;
+   }
+
+   .row,.row-center{
+    display: flex;
+   }
+    .ancres {
+      display: block;
+    }
+
+    .ancreA{
+          padding: 2rem;
+          border-bottom: 3px solid #F2F2F2;
+          padding-left: 113px;
+      }
+
+    .ancreI {
+    padding: 5px 29px 0 0;
+    }
+    .ancreH{
+     border:0px;
+     border-bottom: 3px solid #0065fc;
+    }
+ /*===========En-tête==============*/
+    .heading{
+     text-align:center;
+      margin-top: 23px;
+      margin-bottom:20px;
+    }
+
+    .paragraph{
+     margin-top:10px;
+     margin-left:43px;
+     margin-bottom:30px;
+    }
+ /*===========Populaire==============*/
+    .populaireboite{
+      display: grid;
+      grid-template-rows: 1fr;
+    }
+    .populairecarte{
+      height:200px;
+     }
+ /*===========Hebergments==============*/
+    .hebergementsboites {
+      grid-template-columns: 1fr;
+      display: grid;
+      width:95%;
+    }
+    .hebergements{
+      background-color:#ffff;
+    }
+    .boites {
+      grid-template-columns: 1fr ;
+      display: grid;
+      column-gap: 2rem;
+    }
+   
+ 
+  /*===========Activités==============*/
+    .activitesbox{
+    display:contents;
+    }
+    .activitescartes{
+    margin-top:20px;
+    margin-bottom:47px;
+     width:94%;
+    }
+    .activitescarteB{
+    height: 350px;
+    }
+
+ /*===========Filtres==============*/
+    .filtres{
+      display:flex;
+      display: flow-root;
+    }
+    .boutonfiltre{
+    margin-top:20px;
+    }
+
+     .filtrep {
+        display: flex;
+    }
+
+    .iconeinfo{
+     margin-top:20px;
+    }
+     
+ /*===========footer==============*/
+    .footerboite {
+      grid-template-columns: 1fr;
+      display: grid;
+    }
+}
+
+
+/*==============================MOBILE portrait==============================*/
+/*==============================MOBILE portrait==============================*/
+
+@media screen and (max-width: 500px){      
+ /*===========Header==============*/
+   .logo-desktop,.ancre-desktop{
+    display: none;
+   }
+
+   .row,.row-center{
+    display: flex;
+   }
+    .ancres {
+      display: block;
+      
+    } 
+      .ancreA{
+          padding: 2rem;
+          border-bottom: 3px solid #F2F2F2;
+          padding-left: 113px;
+      }
+
+       .ancreI {
+       padding: 5px 29px 0 0;
+    } 
+
+
+    .ancreH{
+     border:0px;
+     border-bottom: 3px solid #0065fc;
+    }
+  
+
+ /*===========Entête==============*/
+    .heading{
+     text-align:center;
+      margin-top: 23px;
+      margin-bottom:20px;
+      font-size:28px;
+    }
+
+    .paragraph{
+     margin-top:10px;
+     margin-left:43px;
+     margin-bottom:30px;
+    }
+
+   .input_search{
+    display:flex;
+    justify-content:center;
+   }
+   
+ /*===========Filtres==============*/
+    .filtres{
+      display:flex;
+      display: flow-root;
+    }
+    .boutonfiltre{
+    margin-top:20px;
+    }
+    .filtres{
+      display:flex;
+      display: flow-root;
+    }
+    .boutonfiltre{
+    margin-top:20px;
+    }
+     .filtrep {
+        display: flex;
+    }
+    .iconeinfo{
+     margin-top:20px;
+    }
+ /*===========Hebergements==============*/
+    .boites {
+      grid-template-columns: 1fr ;
+      display: grid;
+      column-gap: 2rem;
+    }
+    .hebergementsboites {
+      grid-template-columns: 1fr;
+      display: grid;
+      width:95%;
+    }
+ /*===========Populaire==============*/
+   .populairecarte{
+    height:200px;
+   }
+
+  
+    .populaireboite{
+      display: grid;
+      grid-template-rows: 1fr;
+
+    }
+ /*===========Activités==============*/
+    .activitesbox{
+    display:contents;
+    }
+    .activitescartes{
+    margin-top:20px;
+    margin-bottom:47px;
+     width:94%;
+     height: 230px;
+    }
+    
+ /*===========AFooter=============*/
+    .footerboite {
+      grid-template-columns: 1fr;
+      display: grid;
+    }
+}
+
+
+ /*===========Pour un écran vraiment petit :)==============*/
+@media screen and (max-width: 375px){ 
+
+   .heading{
+     text-align:center;
+      margin-top: 23px;
+      margin-bottom:20px;
+      font-size:20px;
+    }
+
+    .paragraph{
+     margin-top:10px;
+     font-size:14px;
+     margin-bottom:30px;
+    }
+    input[type="search"]  {
+        width:8rem;
+    }
+  
+  
 }
