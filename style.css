@@ -119,6 +119,7 @@ input[type="search"] {
   font-family: Raleway;
   font-size: 1rem;
   font-weight: bold;
+  padding: 0 1.5rem;
 }
 /*====bouton====*/
 .boutonrecherche {
@@ -173,6 +174,9 @@ input[type="search"] {
 /*======paragraphe======*/
 .filtrep {
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  align-items: center;
+  display: flex;
 }
 .filtres p {
   margin: 0 1rem;
@@ -215,6 +219,7 @@ input[type="search"] {
   background-color: #f2f2f2;
   border-radius: 1.5rem;
   padding: 2rem;
+  margin-right: 2rem;
 }
 
 /*======Titre======*/
@@ -262,10 +267,10 @@ input[type="search"] {
   margin-left: 0.25rem;
 }
 .populairenote {
-  margin-top: auto;
   margin-bottom: 0.25rem;
   margin-left: 0.75rem;
 }
+
 .populairecarte img {
   min-width: 33%;
   max-width: 33%;
@@ -325,6 +330,7 @@ input[type="search"] {
   height: 7rem;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
 }
 
 /*======Afficherplus======*/
@@ -337,8 +343,7 @@ input[type="search"] {
 
 /*===============ACTIVITES===============*/
 .activites {
-  margin-left: 2rem;
-  margin-top: 4rem;
+  margin: 4rem 2rem 0;
 }
 
 .activitesbox {
@@ -359,6 +364,7 @@ input[type="search"] {
   overflow: hidden;
   display: flex;
   box-shadow: 0 0 15px lightgrey;
+  cursor: pointer;
   }
 
 /*======Emplacements cartes======*/
@@ -432,8 +438,8 @@ footer p {
 /*==============================Tablette==============================*/
 /*==============================Tablette==============================*/
 
- @media screen and (max-width: 992px){      
-   .logo-desktop,.ancre-desktop{
+ @media screen and (max-width: 960px){      
+   .logo-pc,.ancre-pc{
     display: none;
    }
   /*===========Header==============*/
@@ -444,17 +450,24 @@ footer p {
       display: block;
       
     }
-    .ancreA{
+    .ancreA {
           padding: 2rem;
           border-bottom: 3px solid #F2F2F2;
-          padding-left: 113px;
+          width:50%;
       }
+
+    .ancreA a {
+        display: flex;
+        justify-content: flex-end;
+    }
+
    .ancreI {
     padding: 5px 29px 0 0;
     }
     .ancreH{
      border:0px;
      border-bottom: 3px solid #0065fc;
+     width:50%;
     }
     
      
@@ -480,12 +493,13 @@ footer p {
 /*===========Hébergements==============*/
     .hebergements{
       background-color:#ffff;
+      order:2;
     }
 
     .hebergementsboites {
       grid-template-columns: 1fr;
       display: grid;
-      width:96%;
+      width:100%;
     }
     .boites {
       grid-template-columns: 1fr ;
@@ -499,8 +513,15 @@ footer p {
     }
     .populairecarte{
      height:200px;
-
     }
+    .populaire {
+      margin-right: 0;
+      border-radius:0;
+      order:1;
+    
+    }
+    
+    
 /*===========Activités==============*/
     .activitesbox{
     display:contents;
@@ -508,7 +529,8 @@ footer p {
     .activitescartes{
     margin-top:20px;
     margin-bottom:47px;
-    width:94%;
+    width:100%;
+    height: 300px;
     }
     .activitescarteB{
     height: 350px;
@@ -524,11 +546,9 @@ footer p {
 
      .filtrep {
         display: flex;
-        justify-content: space-around;
+        align-items: center;
     }
-    .iconeinfo{
-     margin-top:20px;
-    }
+
 /*===========Footer==============*/
     .footerboite {
       grid-template-columns: 1fr;
@@ -536,116 +556,13 @@ footer p {
     }
 }
 
-/*==============================MOBILE paysage==============================*/
-/*==============================MOBILE paysage==============================*/
 
-  @media screen and (max-width: 786px){     
+/*==============================MOBILE ==============================*/
+/*==============================MOBILE ==============================*/
 
-     /*===========Header==============*/
-   .logo-desktop,.ancre-desktop{
-    display: none;
-   }
-
-   .row,.row-center{
-    display: flex;
-   }
-    .ancres {
-      display: block;
-    }
-
-    .ancreA{
-          padding: 2rem;
-          border-bottom: 3px solid #F2F2F2;
-          padding-left: 113px;
-      }
-
-    .ancreI {
-    padding: 5px 29px 0 0;
-    }
-    .ancreH{
-     border:0px;
-     border-bottom: 3px solid #0065fc;
-    }
- /*===========En-tête==============*/
-    .heading{
-     text-align:center;
-      margin-top: 23px;
-      margin-bottom:20px;
-    }
-
-    .paragraph{
-     margin-top:10px;
-     margin-left:43px;
-     margin-bottom:30px;
-    }
- /*===========Populaire==============*/
-    .populaireboite{
-      display: grid;
-      grid-template-rows: 1fr;
-    }
-    .populairecarte{
-      height:200px;
-     }
- /*===========Hebergments==============*/
-    .hebergementsboites {
-      grid-template-columns: 1fr;
-      display: grid;
-      width:95%;
-    }
-    .hebergements{
-      background-color:#ffff;
-    }
-    .boites {
-      grid-template-columns: 1fr ;
-      display: grid;
-      column-gap: 2rem;
-    }
-   
- 
-  /*===========Activités==============*/
-    .activitesbox{
-    display:contents;
-    }
-    .activitescartes{
-    margin-top:20px;
-    margin-bottom:47px;
-     width:94%;
-    }
-    .activitescarteB{
-    height: 350px;
-    }
-
- /*===========Filtres==============*/
-    .filtres{
-      display:flex;
-      display: flow-root;
-    }
-    .boutonfiltre{
-    margin-top:20px;
-    }
-
-     .filtrep {
-        display: flex;
-    }
-
-    .iconeinfo{
-     margin-top:20px;
-    }
-     
- /*===========footer==============*/
-    .footerboite {
-      grid-template-columns: 1fr;
-      display: grid;
-    }
-}
-
-
-/*==============================MOBILE portrait==============================*/
-/*==============================MOBILE portrait==============================*/
-
-@media screen and (max-width: 500px){      
+@media screen and (max-width: 460px){      
  /*===========Header==============*/
-   .logo-desktop,.ancre-desktop{
+   .logo-pc,.ancre-pc{
     display: none;
    }
 
@@ -659,7 +576,7 @@ footer p {
       .ancreA{
           padding: 2rem;
           border-bottom: 3px solid #F2F2F2;
-          padding-left: 113px;
+          width:50%;
       }
 
        .ancreI {
@@ -670,6 +587,7 @@ footer p {
     .ancreH{
      border:0px;
      border-bottom: 3px solid #0065fc;
+     width:50%;
     }
   
 
@@ -708,11 +626,10 @@ footer p {
     margin-top:20px;
     }
      .filtrep {
-        display: flex;
+      align-items: center;
+      display: flex;
     }
-    .iconeinfo{
-     margin-top:20px;
-    }
+
  /*===========Hebergements==============*/
     .boites {
       grid-template-columns: 1fr ;
@@ -724,17 +641,23 @@ footer p {
       display: grid;
       width:95%;
     }
+    .hebergements {
+      order:2;
+    }
  /*===========Populaire==============*/
    .populairecarte{
     height:200px;
    }
 
-  
     .populaireboite{
       display: grid;
       grid-template-rows: 1fr;
-
     }
+
+    .populaire {
+      order:1;
+    }
+
  /*===========Activités==============*/
     .activitesbox{
     display:contents;
@@ -742,7 +665,7 @@ footer p {
     .activitescartes{
     margin-top:20px;
     margin-bottom:47px;
-     width:94%;
+     width:100%;
      height: 230px;
     }
     
@@ -751,27 +674,4 @@ footer p {
       grid-template-columns: 1fr;
       display: grid;
     }
-}
-
-
- /*===========Pour un écran vraiment petit :)==============*/
-@media screen and (max-width: 375px){ 
-
-   .heading{
-     text-align:center;
-      margin-top: 23px;
-      margin-bottom:20px;
-      font-size:20px;
-    }
-
-    .paragraph{
-     margin-top:10px;
-     font-size:14px;
-     margin-bottom:30px;
-    }
-    input[type="search"]  {
-        width:8rem;
-    }
-  
-  
 }
