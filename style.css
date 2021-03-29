@@ -255,6 +255,11 @@ input[type="search"] {
 
 /*======Contenu carte======*/
 
+.populairecartecontenu {
+  display: flex;
+  flex-direction: column;
+}
+
 .populairecartecontenu h3 {
   margin: 0.25rem 0.75rem 0.25rem 0.75rem;
 }
@@ -267,6 +272,7 @@ input[type="search"] {
   margin-left: 0.25rem;
 }
 .populairenote {
+  margin-top: auto;
   margin-bottom: 0.25rem;
   margin-left: 0.75rem;
 }
