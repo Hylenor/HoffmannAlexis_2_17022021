@@ -43,25 +43,45 @@ a:visited,
 a:link,
 a:active {
   text-decoration: none;
-} /* Pour la mise en forme têtue des links */
+}
+
+
+/* Ancre Hébergement */
+.ancreH {
+  padding: 2rem;
+  border-top: 3px solid transparent;
+}
 
 .ancreH a {
+  color: black;
+}
+.ancreH a:hover { 
+  color: #0065fc;
+}
+.ancreH:hover {
+  border-top: 3px solid #0065fc;
   color: #0065fc;
 }
 
-.ancreH {
+/* Ancre Activité */
+.ancreA {
   padding: 2rem;
-  border-top: 3px solid #0065fc;
+  border-top: 3px solid transparent;
 }
 
 .ancreA a {
   color: black;
 }
-
-.ancreA {
-  padding: 2rem;
+.ancreA a:hover {
+  color: #0065fc;
+}
+.ancreA:hover {
+  border-top: 3px solid #0065fc;
+  color: #0065fc;
 }
 
+
+/* Ancre Inscription */
 .ancreI a {
   color: #0065fc;
   font-weight: bold;
@@ -273,7 +293,7 @@ input[type="search"] {
 }
 .populairenote {
   margin-top: auto;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -437,6 +457,7 @@ footer {
 }
 footer p {
   margin: 0.75rem 0;
+  cursor: pointer;
 }
 
 /*==============================RESPONSIVE==============================*/
@@ -457,25 +478,37 @@ footer p {
       
     }
     .ancreA {
-          padding: 2rem;
-          border-bottom: 3px solid #F2F2F2;
-          width:50%;
+      border-top:none;
+      border-bottom: 3px solid #F2F2F2;
+      width:50%;
       }
 
     .ancreA a {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
     }
 
    .ancreI {
     padding: 5px 29px 0 0;
     }
     .ancreH{
-     border:0px;
-     border-bottom: 3px solid #0065fc;
+      border-top:none;
+     border-bottom: 3px solid #F2F2F2;
      width:50%;
     }
-    
+    .ancreH a{
+      display: flex;
+        justify-content: center;
+    }
+    .ancreH:hover {
+      border-top:none;
+      border-bottom: 3px solid #0065FC;
+    }
+    .ancreA:hover {
+      border-top:none;
+      border-bottom: 3px solid #0065FC;
+    }
+  
      
   
  /*===========En-tête==============*/
@@ -491,15 +524,16 @@ footer p {
   .reacher_btn{
    display:none; 
   }
-    .paragraph{
+    .paragraphe{
+     text-align:center;
      margin-top:10px;
-     margin-left:43px;
      margin-bottom:30px;
     }
 /*===========Hébergements==============*/
     .hebergements{
       background-color:#ffff;
       order:2;
+      margin-left:0;
     }
 
     .hebergementsboites {
@@ -522,6 +556,7 @@ footer p {
     }
     .populaire {
       margin-right: 0;
+      margin-left: 0;
       border-radius:0;
       order:1;
     
@@ -591,8 +626,7 @@ footer p {
 
 
     .ancreH{
-     border:0px;
-     border-bottom: 3px solid #0065fc;
+     border-bottom: 3px solid #F2F2F2;
      width:50%;
     }
   
@@ -605,9 +639,9 @@ footer p {
       font-size:28px;
     }
 
-    .paragraph{
+    .paragraphe{
+     text-align:center;
      margin-top:10px;
-     margin-left:43px;
      margin-bottom:30px;
     }
 
