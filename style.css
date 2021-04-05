@@ -2,7 +2,8 @@
 html {
   font-family: Raleway, sans-serif;
 }
-main,header {
+main,
+header {
   margin: auto;
   max-width: 1440px;
 }
@@ -30,7 +31,6 @@ header {
   padding: 0 2rem;
 }
 
-
 .ancres {
   display: grid;
   grid-template-areas: "ancreH ancreA ancreI";
@@ -45,7 +45,6 @@ a:active {
   text-decoration: none;
 }
 
-
 /* Ancre Hébergement */
 .ancreH {
   padding: 2rem;
@@ -55,7 +54,7 @@ a:active {
 .ancreH a {
   color: black;
 }
-.ancreH a:hover { 
+.ancreH a:hover {
   color: #0065fc;
 }
 .ancreH:hover {
@@ -79,7 +78,6 @@ a:active {
   border-top: 3px solid #0065fc;
   color: #0065fc;
 }
-
 
 /* Ancre Inscription */
 .ancreI a {
@@ -150,7 +148,7 @@ input[type="search"] {
   font-weight: bold;
   color: white;
   font-size: 1rem;
-  cursor:pointer;
+  cursor: pointer;
 }
 /*===============FILTRES===============*/
 .filtres {
@@ -174,12 +172,12 @@ input[type="search"] {
   margin-right: 2rem;
   height: max-content;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .boutonfiltre:hover {
   transform: scale(1.1);
-  border: 2px solid #0065FC;
+  border: 2px solid #0065fc;
 }
 
 /*===icone bouton====*/
@@ -229,7 +227,6 @@ input[type="search"] {
   grid-template-columns: 6fr 3fr;
   display: grid;
   column-gap: 2rem;
-
 }
 
 .fa-star {
@@ -275,8 +272,8 @@ input[type="search"] {
   box-sizing: border-box;
   box-shadow: 0 0 15px lightgrey;
   display: flex;
-  overflow:hidden;
-  position:relative;
+  overflow: hidden;
+  position: relative;
 }
 .populairecarte > a {
   position: absolute;
@@ -349,7 +346,7 @@ input[type="search"] {
   box-sizing: border-box;
   box-shadow: 0 0 15px lightgrey;
   overflow: hidden;
-  position:relative;
+  position: relative;
 }
 .hebergementcarte > a {
   position: absolute;
@@ -387,8 +384,8 @@ input[type="search"] {
   cursor: pointer;
   display: flex-end;
   margin-top: 3rem;
-  display:flex;
-  color:black;
+  display: flex;
+  color: black;
 }
 
 /*===============ACTIVITES===============*/
@@ -398,7 +395,7 @@ input[type="search"] {
 
 .activitesbox {
   grid-template-columns: 1fr 1fr 1fr 1fr;
- grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   display: grid;
   column-gap: 2rem;
   row-gap: 2rem;
@@ -414,16 +411,16 @@ input[type="search"] {
   overflow: hidden;
   display: flex;
   box-shadow: 0 0 15px lightgrey;
-  position:relative;
-  }
+  position: relative;
+}
 
-  .activitescartes a {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
+.activitescartes a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 
 /*======Emplacements cartes======*/
 .activitescarteA {
@@ -435,7 +432,6 @@ input[type="search"] {
 .activitescarteC {
   grid-row: 1 / span 2;
 }
-
 
 .activitesbox img {
   height: 80%;
@@ -453,24 +449,24 @@ input[type="search"] {
   padding: -5px;
   width: 100%;
   margin-bottom: 0;
-  } 
+}
 
-  .row{
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-  }
+.row {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .row-center{
-    display: none;
-    align-items: center;
-    justify-content: center;
-  }
+.row-center {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
 
-  i.fas.fa-search {
-    display: none;
-  }
-  
+i.fas.fa-search {
+  display: none;
+}
+
 /*==============================FOOTER==============================*/
 
 footer {
@@ -492,8 +488,11 @@ footer {
 }
 footer a {
   margin: 0.75rem 0;
-  display:flex;
-  color:black;
+  display: flex;
+  color: black;
+}
+footer h2 {
+  font-size: 120%;
 }
 
 /*==============================RESPONSIVE==============================*/
@@ -501,253 +500,260 @@ footer a {
 /*==============================Tablette==============================*/
 /*==============================Tablette==============================*/
 
- @media screen and (max-width: 960px){      
-   .logo-pc,.ancre-pc{
+@media screen and (max-width: 960px) {
+  .logo-pc,
+  .ancre-pc {
     display: none;
-   }
+  }
   /*===========Header==============*/
-   .row,.row-center{
+  .row,
+  .row-center {
     display: flex;
-   }
-    .ancres {
-      display: block;
-      
-    }
-    .ancreA {
-      border-top:none;
-      border-bottom: 3px solid #F2F2F2;
-      width:50%;
-      }
-
-    .ancreA a {
-        display: flex;
-        justify-content: center;
-    }
-
-   .ancreI {
-    padding: 5px 29px 0 0;
-    }
-    .ancreH{
-      border-top:none;
-     border-bottom: 3px solid #F2F2F2;
-     width:50%;
-    }
-    .ancreH a{
-      display: flex;
-        justify-content: center;
-    }
-    .ancreH:hover {
-      border-top:none;
-      border-bottom: 3px solid #0065FC;
-    }
-    .ancreA:hover {
-      border-top:none;
-      border-bottom: 3px solid #0065FC;
-    }
-  
-     
-  
- /*===========En-tête==============*/
-    .heading{
-     text-align:center;
-      margin-top: 23px;
-      margin-bottom:20px;
-    }
-
-    i.fas.fa-search {
+  }
+  .ancres {
     display: block;
   }
-  .reacher_btn{
-   display:none; 
+  .ancreA {
+    border-top: none;
+    border-bottom: 3px solid #f2f2f2;
+    width: 50%;
   }
-    .paragraphe{
-     text-align:center;
-     margin-top:10px;
-     margin-bottom:30px;
-    }
-/*===========Hébergements==============*/
-    .hebergements{
-      background-color:#ffff;
-      order:2;
-      margin-left:0;
-    }
 
-    .hebergementsboites {
-      grid-template-columns: 1fr;
-      display: grid;
-      width:100%;
-    }
-    .boites {
-      grid-template-columns: 1fr ;
-      display: grid;
-      column-gap: 2rem;
-    }
-  /*===========Populaire==============*/
-    .populaireboite{
-      display: grid;
-      grid-template-rows: 1fr;
-    }
-    .populairecarte{
-     height:200px;
-    }
-    .populaire {
-      margin-right: 0;
-      margin-left: 0;
-      border-radius:0;
-      order:1;
-    
-    }
-    
-    
-/*===========Activités==============*/
-    .activitesbox{
-    display:contents;
-    }
-    .activitescartes{
-    margin-top:20px;
-    margin-bottom:47px;
-    width:100%;
+  .ancreA a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ancreI {
+    padding: 5px 29px 0 0;
+  }
+  .ancreH {
+    border-top: none;
+    border-bottom: 3px solid #f2f2f2;
+    width: 50%;
+  }
+  .ancreH a {
+    display: flex;
+    justify-content: center;
+  }
+  .ancreH:hover {
+    border-top: none;
+    border-bottom: 3px solid #0065fc;
+  }
+  .ancreA:hover {
+    border-top: none;
+    border-bottom: 3px solid #0065fc;
+  }
+
+  /*===========En-tête==============*/
+  .heading {
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 20px;
+  }
+
+  i.fas.fa-search {
+    display: block;
+  }
+  .reacher_btn {
+    display: none;
+  }
+  .paragraphe {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  /*===========Hébergements==============*/
+  .hebergements {
+    background-color: #ffff;
+    order: 2;
+    margin-left: 0;
+  }
+
+  .hebergementsboites {
+    grid-template-columns: 1fr;
+    display: grid;
+    width: 100%;
+  }
+  .boites {
+    grid-template-columns: 1fr;
+    display: grid;
+    column-gap: 2rem;
+  }
+
+  .hebergementcarte {
     height: 300px;
-    }
-    .activitescarteB{
+  }
+  .hebergementcarte img {
+    height: 70%;
+  }
+  /*===========Populaire==============*/
+  .populaireboite {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .populairecarte {
+    height: 200px;
+  }
+  .populaire {
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 0;
+    order: 1;
+  }
+
+  /*===========Activités==============*/
+  .activitesbox {
+    display: contents;
+  }
+  .activitescartes {
+    margin-top: 20px;
+    margin-bottom: 47px;
+    width: 100%;
+    height: 300px;
+  }
+  .activitescarteB {
     height: 350px;
-    }
- /*===========Filtres==============*/
-    .filtres{
-      display:flex;
-      display: flow-root;
-    }
-    .boutonfiltre{
-    margin-top:20px;
-    }
+  }
+  /*===========Filtres==============*/
+  .filtres {
+    display: flex;
+    display: flow-root;
+  }
+  .boutonfiltre {
+    margin-top: 20px;
+  }
 
-     .filtrep {
-        display: flex;
-        align-items: center;
-    }
+  .filtrep {
+    display: flex;
+    align-items: center;
+  }
 
-/*===========Footer==============*/
-    .footerboite {
-      grid-template-columns: 1fr;
-      display: grid;
-    }
+  /*===========Footer==============*/
+  .footerboite {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
 }
 
-
 /*==============================MOBILE ==============================*/
 /*==============================MOBILE ==============================*/
 
-@media screen and (max-width: 460px){      
- /*===========Header==============*/
-   .logo-pc,.ancre-pc{
+@media screen and (max-width: 460px) {
+  /*===========Header==============*/
+  .logo-pc,
+  .ancre-pc {
     display: none;
-   }
+  }
 
-   .row,.row-center{
+  .row,
+  .row-center {
     display: flex;
-   }
-    .ancres {
-      display: block;
-      
-    } 
-      .ancreA{
-          padding: 2rem;
-          border-bottom: 3px solid #F2F2F2;
-          width:50%;
-      }
+  }
+  .ancres {
+    display: block;
+  }
+  .ancreA {
+    padding: 2rem;
+    border-bottom: 3px solid #f2f2f2;
+    width: 50%;
+  }
 
-       .ancreI {
-       padding: 5px 29px 0 0;
-    } 
+  .ancreI {
+    padding: 5px 29px 0 0;
+  }
 
+  .ancreH {
+    border-bottom: 3px solid #f2f2f2;
+    width: 50%;
+  }
 
-    .ancreH{
-     border-bottom: 3px solid #F2F2F2;
-     width:50%;
-    }
-  
+  /*===========Entête==============*/
+  .heading {
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
 
- /*===========Entête==============*/
-    .heading{
-     text-align:center;
-      margin-top: 23px;
-      margin-bottom:20px;
-      font-size:28px;
-    }
+  .paragraphe {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
 
-    .paragraphe{
-     text-align:center;
-     margin-top:10px;
-     margin-bottom:30px;
-    }
+  .input_search {
+    display: flex;
+    justify-content: center;
+  }
 
-   .input_search{
-    display:flex;
-    justify-content:center;
-   }
-   
- /*===========Filtres==============*/
-    .filtres{
-      display:flex;
-      display: flow-root;
-    }
-    .boutonfiltre{
-    margin-top:20px;
-    }
-    .filtres{
-      display:flex;
-      display: flow-root;
-    }
-    .boutonfiltre{
-    margin-top:20px;
-    }
-     .filtrep {
-      align-items: center;
-      display: flex;
-    }
+  /*===========Filtres==============*/
+  .filtres {
+    display: flex;
+    display: flow-root;
+  }
+  .boutonfiltre {
+    margin-top: 20px;
+  }
+  .filtres {
+    display: flex;
+    display: flow-root;
+  }
+  .boutonfiltre {
+    margin-top: 20px;
+  }
+  .filtrep {
+    align-items: center;
+    display: flex;
+  }
 
- /*===========Hebergements==============*/
-    .boites {
-      grid-template-columns: 1fr ;
-      display: grid;
-      column-gap: 2rem;
-    }
-    .hebergementsboites {
-      grid-template-columns: 1fr;
-      display: grid;
-      width:95%;
-    }
-    .hebergements {
-      order:2;
-    }
- /*===========Populaire==============*/
-   .populairecarte{
-    height:200px;
-   }
+  /*===========Hebergements==============*/
+  .boites {
+    grid-template-columns: 1fr;
+    display: grid;
+    column-gap: 2rem;
+  }
+  .hebergementsboites {
+    grid-template-columns: 1fr;
+    display: grid;
+    width: 95%;
+  }
+  .hebergements {
+    order: 2;
+  }
+  /*===========Populaire==============*/
+  .populairecarte {
+    height: 150px;
+  }
 
-    .populaireboite{
-      display: grid;
-      grid-template-rows: 1fr;
-    }
+  .populaireboite {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
 
-    .populaire {
-      order:1;
-    }
+  .populaire {
+    order: 1;
+  }
 
- /*===========Activités==============*/
-    .activitesbox{
-    display:contents;
-    }
-    .activitescartes{
-    margin-top:20px;
-    margin-bottom:47px;
-     width:100%;
-     height: 230px;
-    }
-    
- /*===========AFooter=============*/
-    .footerboite {
-      grid-template-columns: 1fr;
-      display: grid;
-    }
+  .populairecarte img {
+    min-width: 120px;
+    max-width: 120px;
+  }
+
+  /*===========Activités==============*/
+  .activitesbox {
+    display: contents;
+  }
+  .activitescartes {
+    margin-top: 20px;
+    margin-bottom: 47px;
+    width: 100%;
+    height: 230px;
+  }
+
+  /*===========AFooter=============*/
+  .footerboite {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
 }
